@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Profile Card</title>
+        <title>Suyog Rai</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images\froggo.jpg" type="image/x-icon">
     </head>
     <body>
         <div class="Shadow-Box"></div>
@@ -25,12 +26,36 @@
                     <div class="inner-div active" id="div1">
                         <h4>About Me</h4>
                         <p>My Name is Suyog Rai. I am a web developer and I will help you create your website easily.</p>
+                        <h4>Languages</h4>
+                        <div class="Languages">
+                            <img src="images\html.png" class="html" width="100%" height="100%">
+                            <img src="images\css-3.png" class="css" width="100%" height="100%">
+                            <img src="images\js.png" class="js" width="100%" height="100%">
+                            <img src="images\react.png" class="react" width="100%" height="100%">
+                            <img src="images\php.png" class="php" width="100%" height="100%">
+                        </div>
                     </div>
-                    <div class="inner-div" id="div2">Contacts</div>
+                    <div class="inner-div" id="div2">
+                        <h4>Contacts</h4>
+                        <div class="Contacts">
+                            <a href="https://github.com/S7uy0g" target="_blank"><img src="images\github.png" class="github" width="100%" height="100%"></a>
+                            <a href="https://www.facebook.com/suyog.rai.549" target="_blank"><img src="images\facebook.png" class="facebook" width="100%" height="100%"></a>
+                            <a href="https://www.instagram.com/not_suyog.rai/" target="_blank"><img src="images\instagram.png" class="instagram" width="100%" height="100%"></a>
+                            <a href="https://www.linkedin.com/in/suyog-rai-b142b62aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="images\linkedin.png" class="linkedin" width="100%" height="100%"></a>
+                        </div>
+                        <div class="text">
+                            <input type="text" placeholder="Message" class="Message">
+                            <input type="button" id="submit" class="submit" value="Send">
+                        </div>
+                    </div>
                 </div>
                 <div class="foot">
-                    <div class="About-Me-Button" onclick="showDiv(1)"><h4>About ME</h4></div>
-                    <div class="Contacts-Button" onclick="showDiv(2)"><h4>Contacts</h4></div>
+                    <div class="button active" id="button1" onclick="showDiv(1)">
+                        <h4>About Me</h4>
+                    </div>
+                    <div class="button" id="button2" onclick="showDiv(2)">
+                        <h4>Contacts</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,6 +65,10 @@
                 document.querySelectorAll('.inner-div').forEach(div => div.classList.remove('active'));
                 // Show the selected div
                 document.getElementById('div' + num).classList.add('active');
+                // Hide all divs
+                document.querySelectorAll('.button').forEach(div => div.classList.remove('active'));
+                // Show the selected div
+                document.getElementById('button' + num).classList.add('active');
             }
         </script>
     </body>
