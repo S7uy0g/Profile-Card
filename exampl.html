@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid #ccc;
+    }
+
+    .inner-div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: none;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .inner-div.active {
+      display: block;
+    }
+
+    #div1 {
+      background-color: lightblue;
+    }
+
+    #div2 {
+      background-color: lightgreen;
+    }
+
+    #div3 {
+      background-color: lightcoral;
+    }
+
+    .button-container {
+      margin-top: 10px;
+    }
+
+    .button {
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="div1" class="inner-div active">
+      <h2>Content of Div 1</h2>
+    </div>
+    <div id="div2" class="inner-div">
+      <h2>Content of Div 2</h2>
+    </div>
+    <div id="div3" class="inner-div">
+      <h2>Content of Div 3</h2>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <span class="button" onclick="showDiv(1)">Div 1</span>
+    <span class="button" onclick="showDiv(2)">Div 2</span>
+    <span class="button" onclick="showDiv(3)">Div 3</span>
+  </div>
+
+  <script>
+    function showDiv(divNumber) {
+      // Hide all divs
+      document.querySelectorAll('.inner-div').forEach(div => div.classList.remove('active'));
+
+      // Show the selected div
+      document.getElementById('div' + divNumber).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

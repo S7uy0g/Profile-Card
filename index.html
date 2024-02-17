@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Profile Card</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="Shadow-Box"></div>
+        <div class="Profile-Card">
+            <div class="head">
+                <div class="profile-pic-div">
+                    <img src="images\froggo.jpg" class="profile-pic" width="100%" height="100%">
+                </div>
+                <div class="profile-name-div">
+                    <h1>Suyog Rai</h1>
+                    <h5>WEB DEVELOPER</h5>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="main">
+                    <div class="inner-div active" id="div1">
+                        <h4>About Me</h4>
+                        <p>My Name is Suyog Rai. I am a web developer and I will help you create your website easily.</p>
+                    </div>
+                    <div class="inner-div" id="div2">Contacts</div>
+                </div>
+                <div class="foot">
+                    <div class="About-Me-Button" onclick="showDiv(1)"><h4>About ME</h4></div>
+                    <div class="Contacts-Button" onclick="showDiv(2)"><h4>Contacts</h4></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function showDiv(num){
+                // Hide all divs
+                document.querySelectorAll('.inner-div').forEach(div => div.classList.remove('active'));
+                // Show the selected div
+                document.getElementById('div' + num).classList.add('active');
+            }
+        </script>
+    </body>
+</html>

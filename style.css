@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(to right, #f433ff, #00ccff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Shadow-Box {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    height: 420px;
+    background: white;
+    border-radius: 22px;
+    z-index: 1;
+    opacity: 0.4;
+}
+.Profile-Card{
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    width: 340px;
+    height: 400px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 60%),linear-gradient(to right, #00ccff, #bf00ff);;
+    border-radius: 10px;
+}
+.profile-pic-div{
+    width: 100px;
+    height: 100px;
+    margin: 30px 120px;
+    box-shadow: 0 0 10px;
+    margin-bottom: 5px;
+}
+.profile-pic,.profile-pic-div{
+    border-radius: 50px;
+}
+.profile-name-div{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h1,h5{
+    margin: 0;
+}
+h1{
+    opacity: 0.8;
+}
+h5{
+    margin-top: 8px;
+    opacity: 0.4;
+}
+.main{
+    width:300px;
+    height: 150px;
+    margin-left: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+h4{
+    opacity: 0.6;
+    margin: 0;
+    display: inline-block;
+}
+p{
+    opacity: 0.5;
+    margin: 0;
+}
+.foot{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+.About-Me-Button,.Contacts-Button{
+    cursor: pointer;
+}
+.inner-div{
+    display: none;
+}
+.inner-div.active{
+    display: block;
+}
